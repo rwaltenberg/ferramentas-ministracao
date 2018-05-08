@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import RegularLayout from '../layouts/Regular'
-import HelloWorld from '../components/HelloWorld'
+import Frequency from '../pages/Frequency'
+import Companionships from '../pages/Companionships'
+import Directory from '../pages/Directory'
 
 Vue.use(Router)
 
@@ -15,17 +17,17 @@ export default new Router({
         {
           path: '',
           name: 'Frequencia',
-          component: HelloWorld
+          component: Frequency
         },
         {
           path: 'duplas',
           name: 'Duplas',
-          component: HelloWorld
+          component: Companionships
         },
         {
           path: 'membros',
           name: 'Diretorio',
-          component: HelloWorld
+          component: Directory
         }
       ]
     }
