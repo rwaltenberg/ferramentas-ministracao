@@ -1,8 +1,8 @@
 <template>
   <div id="App">
     <md-drawer class="side-menu" md-permanent="full">
-      <md-toolbar class="md-transparent" md-elevation="0">
-        Menu
+      <md-toolbar class="md-primary" md-elevation="0">
+        <h1>Ferramentas de Ministração</h1>
       </md-toolbar>
 
       <md-list>
@@ -25,7 +25,7 @@
     <md-content md-tag="main" class="main-content">
       <router-view/>
     </md-content>
-    <md-bottom-bar class="bottom-menu" :md-active-item="activeMenuItem">
+    <md-bottom-bar class="bottom-menu" md-type="shift" :md-active-item="activeMenuItem">
       <router-link class="bottom-bar-item" :to="{ name: 'Frequencia' }">
         <md-bottom-bar-item id="BottomBarRouteFrequencia" md-label="Frequência" md-icon="done_all"></md-bottom-bar-item>
       </router-link>
@@ -86,6 +86,12 @@ export default {
     grid-row: 1;
     display: block @(print) none;
     width: 100%;
+  }
+
+  .md-toolbar h1 {
+    line-height: 1.2;
+    font-weight: normal;
+    font-size: 1.6em;
   }
 
   .bottom-menu {
